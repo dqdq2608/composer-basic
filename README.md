@@ -52,3 +52,33 @@
 | ~X.Y.Z           | Compatiable with X.Y.Z ranged in patch only (>= X.Y.Z < X.(Y + 1).0 )    |
 | X.Y.*            | Any version that matching X major and Y minor ( >= X.Y.0 < X.(Y + 1).0 ) |
 | >= x.y.z < X.Y.Z | Greater than or equal to x.y.z, and less than X.Y.Z                      |
+
+## Usage
+
+```
+In composer.json (root package):
+{
+
+    "require-dev": {
+        "quan/composer-basics": "@dev"
+    },
+    "repositories": [
+        {
+            "name": "composer-basics",
+            "type": "vcs",
+            "url": "repository_url"
+        }
+    ]
+
+}
+```
+
+## FAQ
+
+- Why commit composer.lock?
+  - composer.lock is the only where the composer install get to install the right version
+  - In composer.json, I have 1 dependency with ^1.2.0 and I get the 1.2.1 version in composer.lock. Then when I push only the composer.json, my contributor get the 1.2.3 version.
+    => Mismatching between 2 version
+- When use composer install / update on server?
+  - composer install when you want get the stable version in composer.lock (useful when in production stage).
+  - composer update if you want to update the composer.lock for the latest version and install it (suitable for dev/test stage).
