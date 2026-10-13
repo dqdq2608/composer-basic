@@ -1,10 +1,14 @@
 {
-  "schema": "https://getcomposer.org/schema.json",
   "name": "quan/composer-basics",
+  "type": "library",
+  "description": "This is the composer basic library for learning purpose",
   "autoload": {
     "psr-4": {
       "App\\": "src/"
-    }
+    },
+    "files": [
+      "src/helpers.php"
+    ]
   },
   "authors": [
     {
@@ -12,8 +16,7 @@
       "email": "quandong2608@gmail.com"
     }
   ],
-  "scripts": {
-    "setup": "App\\Component::run"
-  },
-  "require": {}
+  "require": {
+    "php": "^8.2"
+  }
 }

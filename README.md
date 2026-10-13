@@ -21,9 +21,9 @@
 | require-dev       | "vendor/pkg_name" : "X.Y.Z@constraint"                        | list of dependencies need for dev enviroment                        | Optional  |
 | autoload          | "namespace" : "source"                                        | map namespace prefix to the related location of file system         | Optional  |
 | autoload-dev      | "namespace" : "source"                                        | map namespace prefix to related location (useful for dev and test)  | Optional  |
+| minimum-stability | stable (default) > RC > beta > alpha > dev                    | define the minimum level of dependencies                            | Optional  |
 | scripts           | "command_name" : [ "array_of_command" ]                       | list of command can run with composer command_name                  | Optional  |
 | config            | "config_name" : "value"                                       | global config for consuming project                                 | Optional  |
-| minimum-stability | stable (default) > RC > beta > alpha > dev                    | define the minimum level of dependencies                            | Optional  |
 | prefer-stable     | true / false                                                  | tell composer to choose the stable dependencies                     | Optional  |
 | repositories      | name, type, url                                               | location for private/local package which not be listed on Packigist | Optional  |
 | authors           | array of key-value                                            | list the authors of package                                         | Optional  |
